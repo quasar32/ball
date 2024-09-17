@@ -7,7 +7,7 @@ static int time;
 static void print_balls(void) {
 	int i;
 
-	printf("\t/* time %d */ {\n", time);
+	printf("\t/* time %f */ {\n", time / 20.0F);
 	for (i = 0; i < N_BALLS; i++) {
 		printf("\t\t/* ball %d */ {\n", i);
 		printf("\t\t\t.mass = %f,\n", balls[i].mass);

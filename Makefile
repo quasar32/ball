@@ -1,4 +1,4 @@
-txt: txt.o ball.o 
+csv: csv.o ball.o 
 	gcc $^ -o $@ -lm 
 
 arr: arr.o ball.o 
@@ -20,7 +20,7 @@ wnd.o: wnd.c
 arr.o: arr.c
 	gcc $< -o $@ -c 
 
-txt.o: txt.c
+csv.o: csv.c
 	gcc $< -o $@ -c 
 
 ball.o: ball.c ball.h
@@ -33,4 +33,4 @@ glad/src/gl.o: glad/src/gl.c
 	gcc $< -o $@ -c -Iglad/include 
 
 clean:
-	rm glad/src/gl.o *.o vid arr txt wnd
+	rm glad/src/gl.o *.o csv arr wnd vid

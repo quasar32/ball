@@ -10,7 +10,7 @@ static void print_balls(void) {
 
 	for (i = 0; i < N_BALLS; i++) {
 		b = &balls[i];
-		printf("%d,%f,%f,%f,%f,%f,%f\n", time, b->mass, b->radius, 
+		printf("%f,%f,%f,%f,%f,%f,%f\n", time / 20.0F, b->mass, b->radius, 
 				b->pos.x, b->pos.y, b->vel.x, b->vel.y);
 	}
 }
