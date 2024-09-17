@@ -26,7 +26,7 @@ csv.o: csv.c
 ball.o: ball.c ball.h
 	gcc $< -o $@ -c
 
-draw.o: draw.c draw.h
+draw.o: draw.c draw.h ball.h
 	gcc $< -o $@ -c -Iglad/include
 
 glad/src/gl.o: glad/src/gl.c
