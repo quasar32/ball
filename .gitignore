@@ -1,1 +1,8 @@
-*.o,txt,arr,wnd,vid,*.sh
+*.o
+txt
+arr
+wnd
+vid
+*.sh
+*.mp4
+.vimrc
