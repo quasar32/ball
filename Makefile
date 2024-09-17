@@ -11,16 +11,16 @@ vid: glad/src/gl.o vid.o ball.o draw.o
 	gcc $^ -o $@ -lSDL2main -lSDL2 -lm -lswscale \
 		-lavcodec -lavformat -lavutil -lx264
 
-vid.o: vid.c
+vid.o: vid.c ball.h draw.h
 	gcc $< -o $@ -c -Iglad/include 
 
-wnd.o: wnd.c
+wnd.o: wnd.c ball.h draw.h
 	gcc $< -o $@ -c -Iglad/include 
 
-arr.o: arr.c
+arr.o: arr.c ball.h
 	gcc $< -o $@ -c 
 
-csv.o: csv.c
+csv.o: csv.c ball.h
 	gcc $< -o $@ -c 
 
 ball.o: ball.c ball.h
