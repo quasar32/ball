@@ -52,8 +52,8 @@ static void render(void) {
 		NULL, NULL, NULL);
 	if (!sws)
 		die("sws_getContext\n");
-	src = pixels;
-	src_stride = WIDTH * 3;
+	src = pixels + WIDTH * 3 * (HEIGHT - 1);
+	src_stride = -WIDTH * 3;
 	outfmt = av_guess_format(NULL, path, NULL);
 	if (!outfmt)
 		die("av_guess_format\n");
